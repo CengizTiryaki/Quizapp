@@ -63,6 +63,7 @@ let questions = [
 
 ];
 
+let rightQuestions = 0;
 
 let currentQuestion = 0;
 
@@ -78,12 +79,19 @@ function showQuestion() {
     
 
     if (currentQuestion >= questions.length) {
-        //Todo: Show End Screen
+        // Show End Screen
         document.getElementById('endScreen').style = '';
         document.getElementById('questionBody').style = 'display: none';
-
-    } else {
-
+          
+        document.getElementById('amount-questions').innerHTML = questions.length;
+        document.getElementById('amount-right-questions').innerHTML = rightQuestions;
+        document.getElementById('header-image').src = 'img/trophy.jpg'
+    } else { // Show Question
+    
+        let percent = currentQuestion / question.length;
+        percent = Math.round (percent * 100);
+        document.getElementfById('progress-bar').innerHTML = `${percent} %`;
+        //console.log('Fortschritt:' , percent);
 
         let question = questions[currentQuestion];
 
@@ -109,6 +117,7 @@ function answer(selection) {
     if (selectedQuestionNumber == question['right_answer']) {
         console.log('Richtige Antwort!');
         document.getElementById(selection).parentNode.classList.add('bg-success');
+        rightQuestions++;
     } else {
         console.log('Falsche Antwort!');
         document.getElementById(selection).parentNode.classList.add('bg-danger');
