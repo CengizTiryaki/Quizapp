@@ -31,7 +31,14 @@
 
     <div class="card quiz-card">
       <img src="img/ball.jpg" class="card-img-top">
-      <div class="card-body">
+
+      <div class="card-body" id="endScreen" style="display: none;"> 
+       Quiz beendet!
+      </div>
+
+
+
+      <div class="card-body" id="questionBody">
         <h5 class="card-title" id="questionText">Frage</h5>
 
         <div class="card quiz-answer-card mb-2">
@@ -41,29 +48,29 @@
         </div>
 
         <div class="card quiz-answer-card mb-2">
-          <div class="card-body"  id="answer_2" onclick="answer('answer_2')">
+          <div class="card-body" id="answer_2" onclick="answer('answer_2')">
             Antwort
           </div>
         </div>
 
         <div class="card quiz-answer-card mb-2">
-          <div class="card-body"  id="answer_3" onclick="answer('answer_3')">
+          <div class="card-body" id="answer_3" onclick="answer('answer_3')">
             Antwort
           </div>
         </div>
 
         <div class="card quiz-answer-card mb-2">
-          <div class="card-body"  id="answer_4" onclick="answer('answer_4')">
+          <div class="card-body" id="answer_4" onclick="answer('answer_4')">
             Antwort
           </div>
         </div>
 
-       
+
         <div class="question-footer">
           <span>
-            <b>1</b> von <b id="all-questions">5</b> Fragen
+            <b id="question-number">1</b> von <b id="all-questions">5</b> Fragen
           </span>
-          <button class="btn btn-primary">Nächste Frage</button>
+          <button onclick="nextQuestion()" class="btn btn-primary" id="next-button" disabled>Nächste Frage</button>
 
         </div>
 
