@@ -39,3 +39,9 @@ body{
     margin-bottom: 30px;
 
 }
+
+.button-row {
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+}
