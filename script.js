@@ -85,12 +85,12 @@ function showQuestion() {
           
         document.getElementById('amount-questions').innerHTML = questions.length;
         document.getElementById('amount-right-questions').innerHTML = rightQuestions;
-        document.getElementById('header-image').src = 'img/trophy.jpg'
+        document.getElementById('header-image').src = 'img/trophy.jpg';
     } else { // Show Question
     
-        let percent = currentQuestion / question.length;
+        let percent = currentQuestion / questions.length;
         percent = Math.round (percent * 100);
-        document.getElementfById('progress-bar').innerHTML = `${percent} %`;
+        document.getElementById('progress-bar').innerHTML = `${percent} %`;
         //console.log('Fortschritt:' , percent);
 
         let question = questions[currentQuestion];
