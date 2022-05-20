@@ -4,7 +4,7 @@ let questions = [
     {
         "question": "Wo findet dieses Jahr die Fußball WM statt?",
         "answer_1": "Kleine Freiheit",
-        "answer_2": "Gnadental",
+        "answer_2": "Meditrain",
         "answer_3": "Ballerbude",
         "answer_4": "Katar",
         "right_answer": 4
@@ -13,10 +13,10 @@ let questions = [
 
     {
         "question": "Wer ist Präsident des DFB?",
-        "answer_1": "Derya",
+        "answer_1": "Eric Molkenboer",
         "answer_2": "Bernd Neuendorf",
-        "answer_3": "Jennifer",
-        "answer_4": "Miriam",
+        "answer_3": "Jennifer Lopes",
+        "answer_4": "Vitali Klitschko",
         "right_answer": 2
 
     },
@@ -90,6 +90,11 @@ function init() {
 
     showQuestion();
 }
+
+function startGame() {
+    document.getElementById('quizstart').style = 'display: none';
+}
+
 
 
 
