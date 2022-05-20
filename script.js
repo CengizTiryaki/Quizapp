@@ -6,8 +6,8 @@ let questions = [
         "answer_1": "Kleine Freiheit",
         "answer_2": "Gnadental",
         "answer_3": "Ballerbude",
-        "answer_4": "katar",
-        "right_answer": 1
+        "answer_4": "Katar",
+        "right_answer": 4
 
     },
 
